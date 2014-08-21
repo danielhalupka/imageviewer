@@ -1,0 +1,18 @@
+{
+    "version": "1.0.1",
+    "name": "com.danielhalupka.imageviewer",
+    "cordova_name": "ImageViewer",
+    "description": "View images inside app",
+    "license": "MIT",
+    "keywords": [
+        "image",
+        " viewer",
+        " android"
+    ],
+    "engines": [
+        {
+            "name": "cordova",
+            "version": ">=2.9.0"
+        }
+    ]
+}

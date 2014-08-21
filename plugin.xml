@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="com.danielhalupka.imageviewer"
+    version="1.0.1">
+    <engines>
+    	<engine name="cordova" version=">=2.9.0" />
+    </engines>
+    <name>ImageViewer</name>
+    <description>View image as on facebook image viewer inside cordova</description>
+    <author>Danijel Halupka</author>
+    <keywords>image, viewer, android</keywords>
+    <license>MIT</license>
+	<js-module src="www/imageviewer.js" name="ImageViewer">
+		<clobbers target="window.ImageViewer" />
+	</js-module>  
+    <platform name="android">
+        <!-- android-specific elements -->
+        <config-file target="config.xml" parent="/*">
+            <feature name="ImageViewer">
+                <param name="android-package" value="com.danielhalupka.imageviewer.ImageViewer" />
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/*">
+            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+        </config-file>
+        <source-file src="src/android/ImageViewer.java" target-dir="src/com/danielhalupka/ImageViewer" />
+    </platform>
+</plugin>
